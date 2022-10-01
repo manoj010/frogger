@@ -52,7 +52,7 @@ class Frogger {
     }
 
     jump() {
-        console.log('jump');
+        //console.log('jump');
     }
 }
 
