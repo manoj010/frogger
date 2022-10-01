@@ -14,6 +14,7 @@ function animate() {
     handleObstacles();
     handleScoreBoard();
     ctx4.drawImage(grass, 0, 0, canvas.width, canvas.height);
+    frame++;
     requestAnimationFrame(animate);
 }
 
@@ -31,6 +32,7 @@ window.addEventListener('keydown', function(e) {
 window.addEventListener('keyup', function(e) {
     delete keys[e.keyCode]; 
     frogger.moving = false;
+    frogger.frameX = 0;
 });
 
 function scored() {
@@ -54,4 +56,20 @@ function handleScoreBoard() {
     ctx4.font = '15px Verdana';
     ctx4.strokeText('Collisions: ' + collisionsCount, 10, 150);
     ctx4.strokeText('Game Speed: ' + gameSpeed.toFixed(1), 10, 175);
+}
+
+//collision detection 
+function collision(first, second) {
+    return !(   first.x > second.x + second.width ||
+                first.x + first.width < second.x ||
+                first.y > second.y + second.height ||
+                first.y + first.height < second.y);
+}
+
+function resetGame() {
+    frogger.x = canvas.width / 2 - frogger.width / 2;
+    frogger.y = canvas.height - frogger.height - 40;
+    score = 0;
+    collisionsCount++;
+    gameSpeed = 1;
 }
