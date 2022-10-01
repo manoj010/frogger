@@ -9,7 +9,7 @@ class Ripple {
     }
 
     drawRipple() {
-        ctx3.strokeStyle = 'rgba(255, 255, 255,' + this.opactity + ')';
+        ctx3.strokeStyle = 'rgba(255, 255, 255,' + this.opacity + ')';
         ctx3.beginPath();   
         ctx3.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx3.stroke();

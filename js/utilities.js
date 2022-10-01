@@ -4,7 +4,7 @@ function animate() {
     ctx3.clearRect(0, 0, canvas.width, canvas.height);
     ctx4.clearRect(0, 0, canvas.width, canvas.height);
     ctx5.clearRect(0, 0, canvas.width, canvas.height);
-
+    
     handleRipples();
     ctx2.drawImage(background, 0, 0, canvas.width, canvas.height);
     handleParticles();
