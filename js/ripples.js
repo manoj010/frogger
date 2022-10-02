@@ -9,11 +9,11 @@ class Ripple {
     }
 
     drawRipple() {
-        ctx3.strokeStyle = 'rgba(255, 255, 255,' + this.opacity + ')';
-        ctx3.beginPath();   
-        ctx3.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx3.stroke();
-        ctx3.closePath();
+        ctx1.strokeStyle = 'rgba(255, 255, 255,' + this.opacity + ')';
+        ctx1.beginPath();   
+        ctx1.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx1.stroke();
+        ctx1.closePath();
     }
     
     ripple() {
