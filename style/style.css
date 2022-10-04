@@ -1,3 +1,7 @@
+body {
+    background-color: grey;
+}
+
 .wrapper {
     border: 5px solid black;
     top: 50%;
